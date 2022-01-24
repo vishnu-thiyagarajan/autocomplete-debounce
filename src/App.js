@@ -11,7 +11,7 @@ function App() {
     setText(value);
     if (id) clearTimeout(id);
     const fetchData = () => {
-        fetch('http://localhost:3000/country.json')
+        fetch('https://debounce.netlify.app/country.json')
         .then(response => response.json())
         .then(data => {
           setList(data.filter((item)=>item.Name.toLowerCase().startsWith(value.toLowerCase())));
